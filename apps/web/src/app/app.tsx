@@ -1,11 +1,16 @@
-import NxWelcome from './nx-welcome';
+import { View, Text, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  fullScreen: {
+    height: '100vh',
+  },
+});
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="web" />
-      <div />
-    </>
+    <View style={styles.fullScreen}>
+      <Text>hello world</Text>
+    </View>
   );
 }
 

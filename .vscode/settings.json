@@ -1,0 +1,8 @@
+{
+  "files.exclude": {
+    "{apps,libs}/**/{tsconfig*.json,.eslintrc.json}": true,
+  },
+  "cSpell.words": [
+    "nrwl"
+  ],
+}

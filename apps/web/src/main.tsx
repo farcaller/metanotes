@@ -1,11 +1,15 @@
 import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom';
+import { AppRegistry } from 'react-native';
 
 import App from './app/app';
 
-ReactDOM.render(
+const Root = () => (
   <StrictMode>
     <App />
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
+
+AppRegistry.registerComponent('main', () => Root);
+AppRegistry.runApplication('main', {
+  rootTag: document.getElementById('root'),
+});
