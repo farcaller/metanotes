@@ -1157,6 +1157,11 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/standalone@^7.17.1":
+  version "7.17.1"
+  resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.17.1.tgz#fe62491d0ec6f442cba3895e6ec3fa6c61de129c"
+  integrity sha512-rNHDt0ESbXq6BZv89BaSB0nlfymx/X5ASndRM58xOkgOJ6+YuCq8R3//3QP1sLAY2m4exiCg4BFD53vCVFzBKw==
+
 "@babel/template@^7.0.0", "@babel/template@^7.12.13", "@babel/template@^7.12.7", "@babel/template@^7.16.7", "@babel/template@^7.3.3":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.7.tgz#8d126c8701fde4d66b264b3eba3d96f07666d155"
@@ -1907,6 +1912,36 @@
     "@phenomnomnominal/tsquery" "4.1.1"
     tmp "~0.2.1"
     tslib "^2.3.0"
+
+"@nrwl/node@^13.7.3":
+  version "13.7.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.7.3.tgz#06a8c535190663cf48f1dd35bd86a015e485de23"
+  integrity sha512-NcLYqG0JcXMsCs8UVXvu2r2lkFonywfqBAWZsIeQWn9xoH1WSqzvHMiuWySFg4ltN/MpQ8hTGvrQlt83fwRJ/Q==
+  dependencies:
+    "@nrwl/devkit" "13.7.3"
+    "@nrwl/jest" "13.7.3"
+    "@nrwl/linter" "13.7.3"
+    "@nrwl/workspace" "13.7.3"
+    chalk "4.1.0"
+    copy-webpack-plugin "^9.0.1"
+    enhanced-resolve "^5.8.3"
+    fork-ts-checker-webpack-plugin "6.2.10"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "4.0.0"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    source-map-support "0.5.19"
+    terser-webpack-plugin "^5.3.0"
+    tree-kill "1.2.2"
+    ts-loader "^9.2.6"
+    ts-node "~9.1.1"
+    tsconfig-paths "^3.9.0"
+    tsconfig-paths-webpack-plugin "3.5.2"
+    tslib "^2.3.0"
+    webpack "^5.58.1"
+    webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
 
 "@nrwl/nx-cloud@latest":
   version "13.1.2"

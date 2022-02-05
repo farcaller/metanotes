@@ -1,0 +1,23 @@
+{
+  "root": "libs/scribble-resolver",
+  "sourceRoot": "libs/scribble-resolver/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/scribble-resolver/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/scribble-resolver"],
+      "options": {
+        "jestConfig": "libs/scribble-resolver/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
