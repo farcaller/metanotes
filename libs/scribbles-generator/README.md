@@ -1,7 +1,4 @@
 # scribbles-generator
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test scribbles-generator` to execute the unit tests via [Jest](https://jestjs.io).
+The nx generator for scribbles and the executor that builds pre-packaged
+scribbles from their source.

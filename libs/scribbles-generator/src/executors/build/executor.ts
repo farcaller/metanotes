@@ -59,15 +59,6 @@ function processScribble(sourceFile: string, source: string): ScribbleInfo {
 
   body += `\n//# sourceURL=${sourceFile}`;
 
-  // let output = `"use strict";\n`;
-  // output += 'Object.defineProperty(exports, "__esModule", { value: true });\n';
-  // output += `const scribble = {\n`;
-  // output += `  id: '${id}',\n`;
-  // output += `  attributes: ${JSON.stringify(attrs)},\n`;
-  // output += `  body: ${JSON.stringify(body)},\n`;
-  // output += `};\n`;
-  // output += `exports.default = scribble;\n`;
-
   return {
     attributes: attrs,
     compiled: SCRIBBLE_TEMPLATE({
@@ -81,14 +72,12 @@ function processScribble(sourceFile: string, source: string): ScribbleInfo {
 function generateScribble(sourceFile: string, outputDir: string): string {
   const source = fs.readFileSync(sourceFile, { encoding: 'utf-8' });
   const output = processScribble(sourceFile, source);
-  const title = output.attributes['title'];
-  const outPath = path.join(outputDir, title);
+  const slug = output.attributes['mn-slug'];
+  const outPath = path.join(outputDir, slug);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(`${outPath}.js`, output.compiled);
-  console.log(
-    `built scribble ${output.attributes['title']} from ${sourceFile}`
-  );
-  return title;
+  console.log(`built scribble ${slug} from ${sourceFile}`);
+  return slug;
 }
 
 function generateIndex(scribbleTitles: string[], outputDir: string) {
@@ -118,10 +107,10 @@ export default async function* runExecutor(
   const files = glob.sync(options.scribbleFilePatterns);
 
   if (options.watch !== true) {
-    const titles = files.map((sourceFile) =>
+    const slugs = files.map((sourceFile) =>
       generateScribble(sourceFile, options.outputPath)
     );
-    generateIndex(titles, options.outputPath);
+    generateIndex(slugs, options.outputPath);
     // TODO: this doesn't work because nx thinks the cache is good enough
     yield {
       success: true,
@@ -136,14 +125,14 @@ export default async function* runExecutor(
       });
     });
 
-    const titles = files.map((sourceFile) =>
+    const slugs = files.map((sourceFile) =>
       generateScribble(sourceFile, options.outputPath)
     );
-    generateIndex(titles, options.outputPath);
+    generateIndex(slugs, options.outputPath);
 
     for await (const sourceFile of eachValueFrom(observable)) {
       generateScribble(sourceFile, options.outputPath);
-      generateIndex(titles, options.outputPath);
+      generateIndex(slugs, options.outputPath);
       yield sourceFile;
     }
   }

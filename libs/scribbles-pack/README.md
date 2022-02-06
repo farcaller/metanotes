@@ -1,7 +1,7 @@
 # scribbles-pack
 
-This library was generated with [Nx](https://nx.dev).
+Contains pre-packaged scribbles that other libraries can depend on via either
 
-## Running unit tests
-
-Run `nx test scribbles-pack` to execute the unit tests via [Jest](https://jestjs.io).
+- `import scribbles from '@metanotes/scribbles-pack'` for all the scribbles
+- `import Scribble from '@scribbles//scribble-slug'` for a specific scribble by
+  its slug
