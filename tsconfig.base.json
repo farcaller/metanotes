@@ -16,7 +16,18 @@
     "baseUrl": ".",
     "paths": {
       "@metanotes/scribble-resolver": ["libs/scribble-resolver/src/index.ts"],
-      "@metanotes/scribbles-store": ["libs/scribbles-store/src/index.ts"]
+      "@metanotes/scribbles-generator": [
+        "libs/scribbles-generator/src/index.ts"
+      ],
+      "@metanotes/scribbles-pack": ["libs/scribbles-pack/src/index.ts"],
+      "@metanotes/scribbles-pack/generated/*": [
+        "libs/scribbles-pack/generated/*"
+      ],
+      "@metanotes/scribbles-store": ["libs/scribbles-store/src/index.ts"],
+      "@metanotes/scribbles/hello-world": [
+        "libs/scribbles/hello-world/src/index.ts"
+      ],
+      "@scribbles/*": ["libs/scribbles-pack/types/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

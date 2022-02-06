@@ -1,0 +1,16 @@
+{
+  "root": "apps/scribbles-generator-e2e",
+  "projectType": "application",
+  "sourceRoot": "apps/scribbles-generator-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/nx-plugin:e2e",
+      "options": {
+        "target": "scribbles-generator:build",
+        "jestConfig": "apps/scribbles-generator-e2e/jest.config.js"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["scribbles-generator"]
+}

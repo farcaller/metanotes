@@ -1,0 +1,6 @@
+"use strict"
+export default {
+  id: '<%= id %>',
+  attributes: <%- JSON.stringify(attrs) %>,
+  body: <%- JSON.stringify(body)  %>,
+};

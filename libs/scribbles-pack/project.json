@@ -1,0 +1,59 @@
+{
+  "root": "libs/scribbles-pack",
+  "sourceRoot": "libs/scribbles-pack/src",
+  "projectType": "library",
+  "tags": [],
+  "implicitDependencies": ["scribbles-generator"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/scribbles-pack/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/scribbles-pack"],
+      "options": {
+        "jestConfig": "libs/scribbles-pack/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "./dist/libs/scribbles-generator:build",
+      "options": {
+        "scribbleFilePatterns": "libs/**/*.scribble.{ts,tsx}",
+        "outputPath": "libs/scribbles-pack/generated/"
+      }
+    },
+    "serve": {
+      "executor": "./dist/libs/scribbles-generator:build",
+      "options": {
+        "scribbleFilePatterns": "libs/**/*.scribble.{ts,tsx}",
+        "outputPath": "libs/scribbles-pack/generated/",
+        "watch": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
+    },
+    "storybook": {
+      "executor": "./dist/libs/scribbles-generator:build",
+      "options": {
+        "scribbleFilePatterns": "libs/**/*.scribble.{ts,tsx}",
+        "outputPath": "libs/scribbles-pack/generated/",
+        "watch": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
+    }
+  }
+}

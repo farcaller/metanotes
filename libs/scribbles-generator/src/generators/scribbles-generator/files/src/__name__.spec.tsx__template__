@@ -1,0 +1,15 @@
+import { render } from '@testing-library/react';
+
+import { resolveScribble } from '@metanotes/scribble-resolver';
+import { Scribble } from '@metanotes/scribbles-store';
+
+import <%= className %>Scribble from '@scribbles//<%= title %>';
+
+const <%= className %> = resolveScribble<React.FC>(Scribble.fromCoreScribble(null, <%= className %>Scribble));
+
+describe('<%= className %>', () => {
+  it('should render successfully', () => {
+    const { baseElement } = render(<<%= className %> />);
+    expect(baseElement).toBeTruthy();
+  });
+});

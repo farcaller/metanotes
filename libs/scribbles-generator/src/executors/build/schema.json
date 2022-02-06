@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Build executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "scribbleFilePatterns:": {
+      "type": "string",
+      "description": "glob pattern for scribble files"
+    },
+    "outputPath:": {
+      "type": "string",
+      "description": "target directory for the scribble tree"
+    },
+    "watch": {
+      "type": "boolean",
+      "description": "run in watch mode"
+    }
+  },
+  "required": [
+    "scribbleFilePatterns",
+    "outputPath"
+  ]
+}

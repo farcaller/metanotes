@@ -1,0 +1,23 @@
+/* attributes *
+ * id: <%= ulid %>
+ * content-type: application/vnd.metanotes.widget
+ * title: <%= title %>
+ */
+
+import { StyleSheet, View } from 'react-native';
+
+/* eslint-disable-next-line */
+export interface <%= className %>Props {}
+
+const styles = StyleSheet.create({
+  view: {},
+});
+
+export function <%= className %>(props: <%= className %>Props) {
+  return (
+    <View style={styles.view}>
+    </View>
+  );
+}
+
+export default <%= className %>;

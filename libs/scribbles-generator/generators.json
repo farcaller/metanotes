@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "scribbles-generator",
+  "version": "0.0.1",
+  "generators": {
+    "scribbles-generator": {
+      "factory": "./src/generators/scribbles-generator/generator",
+      "schema": "./src/generators/scribbles-generator/schema.json",
+      "description": "scribbles-generator generator"
+    }
+  }
+}

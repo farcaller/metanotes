@@ -1,0 +1,56 @@
+{
+  "root": "libs/scribbles-generator",
+  "sourceRoot": "libs/scribbles-generator/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/scribbles-generator/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/scribbles-generator"],
+      "options": {
+        "jestConfig": "libs/scribbles-generator/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/scribbles-generator",
+        "tsConfig": "libs/scribbles-generator/tsconfig.lib.json",
+        "packageJson": "libs/scribbles-generator/package.json",
+        "main": "libs/scribbles-generator/src/index.ts",
+        "assets": [
+          "libs/scribbles-generator/*.md",
+          {
+            "input": "./libs/scribbles-generator/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/scribbles-generator/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/scribbles-generator",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/scribbles-generator",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

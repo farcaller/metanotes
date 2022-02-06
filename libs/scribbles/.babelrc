@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@nrwl/react/babel",
+      {
+        "runtime": "automatic",
+        "useBuiltIns": "usage"
+      }
+    ]
+  ],
+  "plugins": [
+    "../../dist/libs/scribbles-generator/src/babel/loader.js",
+    ["react-native-web", { "commonjs": true }]
+  ]
+}

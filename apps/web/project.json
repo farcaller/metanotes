@@ -2,6 +2,9 @@
   "root": "apps/web",
   "sourceRoot": "apps/web/src",
   "projectType": "application",
+  "implicitDependencies": [
+    "scribbles-pack"
+  ],
   "targets": {
     "build": {
       "executor": "@nrwl/web:webpack",

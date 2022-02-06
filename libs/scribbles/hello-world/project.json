@@ -1,0 +1,24 @@
+{
+  "root": "libs/scribbles/hello-world",
+  "sourceRoot": "libs/scribbles/hello-world/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/scribbles/hello-world/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/scribbles/hello-world"],
+      "options": {
+        "jestConfig": "libs/scribbles/hello-world/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "implicitDependencies": ["scribbles-generator", "scribbles-pack"]
+}

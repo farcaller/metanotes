@@ -4,6 +4,10 @@
     "mobile": "apps/mobile",
     "mobile-e2e": "apps/mobile-e2e",
     "scribble-resolver": "libs/scribble-resolver",
+    "scribbles-generator": "libs/scribbles-generator",
+    "scribbles-generator-e2e": "apps/scribbles-generator-e2e",
+    "scribbles-hello-world": "libs/scribbles/hello-world",
+    "scribbles-pack": "libs/scribbles-pack",
     "scribbles-store": "libs/scribbles-store",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
