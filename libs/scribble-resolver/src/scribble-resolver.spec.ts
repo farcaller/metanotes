@@ -1,4 +1,4 @@
-import { resolveScribble } from './scribble-resolver';
+import { resolveScribble } from './index';
 
 describe('resolveScribble', () => {
   it('resolves scribbles', () => {
