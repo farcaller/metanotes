@@ -4,6 +4,7 @@
     "mobile": "apps/mobile",
     "mobile-e2e": "apps/mobile-e2e",
     "scribble-resolver": "libs/scribble-resolver",
+    "scribbles-store": "libs/scribbles-store",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

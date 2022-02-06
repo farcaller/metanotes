@@ -11,13 +11,17 @@
   "private": true,
   "dependencies": {
     "@babel/standalone": "^7.17.1",
+    "ajv": "^8.10.0",
     "core-js": "^3.6.5",
+    "js-yaml": "^4.1.0",
+    "mobx": "^6.3.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.66.4",
     "react-native-web": "^0.17.5",
     "regenerator-runtime": "0.13.7",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "ulid": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
@@ -51,6 +55,7 @@
     "@testing-library/react-native": "9.0.0",
     "@types/detox": "18.1.0",
     "@types/jest": "27.0.2",
+    "@types/js-yaml": "^4.0.5",
     "@types/node": "16.11.7",
     "@types/react": "17.0.30",
     "@types/react-dom": "17.0.9",

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@metanotes/scribble-resolver": ["libs/scribble-resolver/src/index.ts"]
+      "@metanotes/scribble-resolver": ["libs/scribble-resolver/src/index.ts"],
+      "@metanotes/scribbles-store": ["libs/scribbles-store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
